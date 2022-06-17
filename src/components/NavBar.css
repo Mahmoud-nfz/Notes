@@ -1,0 +1,17 @@
+.logo{
+    margin: 0px 10px;
+    font-family: cursive;
+    font-size: 44px;
+    color: rgb(52, 190, 190);
+    text-decoration: none;
+}
+
+.search{
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+nav{
+    display: flex;
+}
+

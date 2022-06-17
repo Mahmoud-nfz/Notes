@@ -1,0 +1,13 @@
+.card{
+    /* width: 300px; */
+    margin : 5px;
+    display: inline-block;
+}
+.row{
+    /* margin: 100px; */
+    width: 100%;
+    padding: 16px 0px;
+}
+.mask{
+    background-color: rgba(251, 251, 251, 0.15);
+}
