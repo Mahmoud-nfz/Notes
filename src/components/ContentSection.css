@@ -1,13 +1,19 @@
 .card{
     /* width: 300px; */
-    margin : 5px;
-    display: inline-block;
+    /* width: 20rem; */
+    margin : 20px 0px;
+    /* display: inline-block; */
 }
 .row{
-    /* margin: 100px; */
-    width: 100%;
-    padding: 16px 0px;
+    /* width: 100%; */
+    padding: 110px 20px 10px 20px;
 }
 .mask{
     background-color: rgba(251, 251, 251, 0.15);
+}
+.col{
+    margin: 0 20px;
+    position: relative;
+    display: inline-block;
+    max-width: 10rem;
 }

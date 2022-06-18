@@ -2,7 +2,7 @@ import React from "react";
 import axios from 'axios' ;
 import { useState, useEffect } from "react";
 import './ContentSection.css'
-
+// import fontawe
 
 function ContentSection(){
 
@@ -28,30 +28,38 @@ function ContentSection(){
         req() ;
       },[]);
     
-      const postsTitles: any[] = [] ;
+      const postsTitles: any[][] = [[],[],[]] ;
+      let i = 0 ;
       posts.forEach((element) => {
-        postsTitles.push(
-            <div key={element["id"]} className="card col-sm-3" >
+        postsTitles[i%3].push(
+            <div key={element["id"]} className="card" style={{backgroundImage: `url("https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp")`}} >
                 <div className="card-body">
-                <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                {/* <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                     <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" className="img-fluid"/>
                     <a href="#!">
                     <div className="mask"></div>
                     </a>
-                </div>
+                </div> */}
                     <h5 className="card-title">{element["title"]}</h5>
                     <p className="card-text">{element["body"]}</p>
                     <a href="#" className="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
         );
+        i ++ ;
     })
 
 
     return (
-        <div className="container">
-            <div className="row">
-                {postsTitles}
+        <div className="row">
+            <div className="col">
+                {postsTitles[0]}
+            </div>
+            <div className="col">
+                {postsTitles[1]}
+            </div>
+            <div className="col">
+                {postsTitles[2]}
             </div>
         </div>
     );
